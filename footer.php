@@ -21,7 +21,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<a href="#" class="totop"></a>
 <?php wp_footer(); ?>
 
 </body>
