@@ -20,11 +20,10 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wiatheme' ), 'wiatheme', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+    </div><!-- #inner-wrap -->
 </div><!-- #page -->
 <a href="#" class="totop"></a>
 <?php wp_footer(); ?>
 
-</body>
-</html>
 </body>
 </html>
