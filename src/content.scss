@@ -1,6 +1,6 @@
 
 body{
-    background:url('${template_directory_uri}/img/bg.png') top no-repeat #f3e8d9;
+    background:url('#{$template_directory_uri}/bg.png') top no-repeat #f3e8d9;
     background-attachment: fixed;
     background-size: cover;
   a{
@@ -15,6 +15,35 @@ body{
 #primary, #main{
     overflow: hidden;
 }
+
+
+////////////////////////////
+//     SLIDER 
+////////////////////////////
+.amazingslider-wrapper-1, .amazingslider-slider-1, .amazingslider-space-1, .amazingslider-box-1{
+    @media(min-width:2000px){
+        width: 2000px !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media(min-width:2000px){
+    .wonderpluginslider{
+        background: $second;
+        height: 1105px !important;
+    }
+    .amazingslider-space-1{
+        height: 1105px !important;
+    }
+}
+.amazingslider-img-box-1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+// slider
+.amazingslider-nav-1{display: none !important;}
+
 
 
 ////////////////////////////
