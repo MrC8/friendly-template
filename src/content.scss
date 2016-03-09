@@ -1,6 +1,6 @@
 
 body{
-    background:url('#{$template_directory_uri}/bg.png') top no-repeat #f3e8d9;
+    background:url('#{$template_directory_uri}/bg.png') top repeat #f3e8d9;
     background-attachment: fixed;
     background-size: cover;
   a{
