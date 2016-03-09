@@ -1,4 +1,7 @@
-$template_directory_uri: "http://www.web-ia.net/wp-content/themes/wiatheme-sass";
+$template_directory_uri: "../img";
+@function get-path-to-assets($template_directory_uri){
+  @return $template_directory_uri;
+}
 
 // Couleurs principales
 $primary:		   #439ab3;  // vert
