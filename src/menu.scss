@@ -2,33 +2,6 @@
     background: $primary;
 }
 
-@media(max-width:767px){
-    #site-navigation.sticky{
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
-        z-index: 100;
-        animation: moveFromTop 500ms ease;
-        .menu-menu-principal-container{
-            display: block;
-            max-height: 340px;
-            height:auto;
-            overflow-y:scroll;
-        }
-    }
-}
-@keyframes moveFromTop {
-    from {
-        transform: translateY(-100%);
-        opacity:0;
-    }
-    to {
-        transform: translateY(0%);
-        opacity:1;
-    }
-}
-
 ul#primary-menu{
     margin: 0; padding: 0;
     list-style: none;
