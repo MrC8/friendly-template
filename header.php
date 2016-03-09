@@ -10,7 +10,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+<div id="inner-wrap">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding container">
 			<?php if ( is_front_page() && is_home() ) : ?>
