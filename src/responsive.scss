@@ -1,0 +1,481 @@
+/// LES GRANDS ECRANS
+@media (max-width:1650px){  
+    .site-branding{
+        img{
+            margin: 0 auto;
+        }
+    }    
+}
+
+/// EN DESSOU DE 1040PX
+@media (max-width:1040px){
+    /// LOGO
+    .logo{
+        img{
+            max-width: 50%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+    .site-title{
+        margin: .4em 0 0 0;
+        font-size:3rem !important;
+        line-height: 2.6rem;
+        span{
+            font-size: 2rem !important;
+        }
+    }    
+    /// PHONE
+    #masthead{
+        .phone{
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            a{
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+            }
+        }
+    }   
+    
+
+    /// BLOC HOME
+    .partenaires{
+        h2{
+            font-size: 1.8rem;
+            &:before{
+                font-size: 1.8rem;
+            }
+        }
+        .textwidget > .bloc {
+            p{
+                font-size: 1.4rem;
+            }
+            &.iso3{
+                background-position: 10px 10px;
+            }
+            &.jpp{
+                background-position: 10px 10px;
+            }        
+        }
+    }  
+
+    /// BLOC PRESTATION
+    .prestations{
+        .menu-menu-prestations-container{
+            ul{         
+                li{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    } 
+    
+    //////////////////////
+    // BOTTOM ACCUEIL
+    //////////////////////
+    .sallebain{
+        .textwidget{
+            background-position: top right;
+        }
+    }
+
+    .etude{
+        a{
+            font-size: 3rem;      
+            span{
+                font-size: 4.8rem;
+            }
+        }
+    }      
+
+}
+
+
+
+/// DE L'IPAD HORIZONTAL A 1200PX
+@media (min-width:1024px) and (max-width:1279px){
+
+    /// SIDEBAR   
+    #secondary .widget-title{
+        font-size: 2rem;
+    }       
+    #secondary .widget_nav_menu{
+        .menu{
+            li{
+                a{
+                    font:1.8rem $font;
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+
+/// IPAD HORIZONTAL ET VERTICAL
+
+@media (min-width:768px) and (max-width:1024px){ 
+    
+    /// MENU
+    ul#primary-menu{
+        > li{
+            a{
+                min-height: auto;
+                padding: .5em .6em;
+                font-size: 1.6rem;
+            }
+        }
+        li.menu-item-has-children{ // menu parent
+            > a:after{
+                font-size: 1.2rem;
+            }
+        }
+        li.menu-item-has-children ul.sub-menu li a{
+            padding: .4em .8em;
+            font-size: 1.4rem !important;
+        }
+    }
+    #masthead-suite ul#primary-menu{
+        > li{
+            a{
+                min-height: auto;
+                padding: .4em;
+                font-size: 1.4rem;
+            }
+        }        
+    }
+    
+    
+    //////////////////////
+    // BOTTOM
+    //////////////////////
+    #bottom{
+        h3{
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            &:after, &:before {
+                display: none
+            }     
+        }
+        img{max-width: 100%; height: auto;} 
+    }    
+   
+    
+
+}
+
+
+
+/// AU DESSUS DE 768PX
+
+@media (min-width:768px){
+    /// MENU
+    .menu-toggle,
+    .nav-txt{display: none;}   
+}
+
+
+/// EN DESSOUS DE 800PX
+@media (max-width:800px){
+    /// LOGO
+    #masthead{
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+    }
+    /// LOGO
+    .logo{
+        img{
+            max-width: 70%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }    
+    .site-title{
+        font-size:3rem !important;
+        line-height: 3rem;
+        span{
+            font-size: 2rem !important;
+        }
+    }
+    
+    
+    /// SIDEBAR   
+    #secondary .widget-title{
+        font-size: 1.4rem;
+    }       
+    #secondary .widget_nav_menu{
+        .menu{
+            li{
+                a{
+                    font:1.2rem $font;
+                }
+            }
+        }
+    }
+        
+
+    /// FOOTER
+    #colophon{
+        h3{
+            font-size: 1.8rem;
+        }
+    }
+
+}
+
+/// EN DESSOUS DE 768PX
+@media (max-width:768px){
+    .entry-title, .page-title{
+        font-size: 4rem;
+    }    
+    
+}
+
+@media (max-width:667px){
+    /// LOGO
+    .site-branding {
+        min-height: inherit !important;
+        height: auto !important;
+        overflow: hidden;
+        position: inherit !important; 
+        img{
+            max-width: 80%;
+            height: auto; 
+            position: inherit !important
+        }
+    }
+    
+    
+    /// MENU
+    #site-navigation{
+    }
+    button.menu-toggle{
+        display: inline-block;
+        border: none !important;
+        background: $primary;
+        color: #fff;
+        height: auto;
+        width: 100%;
+        padding: .5em;
+        margin: 0 auto;
+        float: none;
+        font: 2.4rem $font-b;
+        outline: inherit;
+        text-align: center;
+        &:focus, &:active{
+            outline: inherit;
+        }
+    }
+    
+    .nav-menu{display: none;}
+    .toggled .nav-menu{display: block;}
+    .toggled .menu-menu-principal-container{
+        margin: 0 0 1em 0;
+        overflow-y: scroll;
+    }
+    #primary-menu > li{
+        display:inherit !important;
+        clear: both;
+        text-align: center;
+        > a{
+            min-height: inherit !important;
+            font-size: 1.4rem;
+            padding: .3em 0;
+        }
+    }
+    ul#primary-menu > li ul.sub-menu{ // sous menu désactivé
+        display: block;
+        list-style: none;
+        margin: 0; padding: 0;
+        > li a{
+            text-transform: none !important;
+            padding: .2em 0;
+        }        
+    }
+    li.menu-item-has-children {
+        position:inherit !important;
+        &:hover > ul.sub-menu {
+            position: inherit !important;
+            top:inherit !important;
+            left:inherit !important;
+            float: none !important;
+            width: auto !important;
+            text-align: center !important;
+        } 
+    }
+    
+    
+    
+    /// SLIDER
+    .wonderpluginslider{display: none !important;}
+    
+    /// HOME
+    .home .entry-content{
+        .readon{
+            float: none;
+            margin: .5em 0 0 0;
+            width: 100%;
+        }
+    }
+    
+    /// BLOC HOME
+    .partenaires{
+        h2{
+            font-size: 1.8rem;
+            &:before{
+                font-size: 1.8rem;
+            }
+        }
+        .textwidget > .bloc {
+            p{
+                font-size: 1.2rem;
+            }
+            &.iso3{
+                background-image: url('${template_directory_uri}/img/logo-3-iso.png');
+                background-position: 20px 10px;
+                background-repeat: no-repeat;
+            }
+            &.jpp{
+                background-image: url('${template_directory_uri}/img/logo-jpp.png');
+                background-position: 20px 10px;
+                background-repeat: no-repeat;
+            }         
+        }
+        .readon{
+            padding: .5em;
+        }
+    }
+    
+    
+    /// MENU PRESTATION
+    .prestations{
+        .menu-menu-prestations-container{
+            margin: 10px;
+            background: $primary;
+            font-size: 0;
+            ul{
+                  display:block;            
+                li{
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+    }    
+
+    // SALLE DE BAINS
+    .sallebain{
+        margin-bottom: 1em;
+        h2{
+            display: block;
+            padding: .5em 1em; margin: 0;
+            font-size: 1.8rem;
+            color: #fff;
+            text-align: center;
+            background: $primary;
+        }
+        .textwidget{
+            background:$gray-lighter;
+            text-align: center;
+            height: auto;
+            overflow: hidden;   
+            padding-bottom: 1em;
+            h3{
+                color: $primary;
+                position:inherit;
+                margin: 0; padding: 0;
+                bottom: inherit;
+                right: inherit;
+            }
+            a{
+                margin: 0; padding: .5em;
+                font-size: 1.8rem;
+                color: #fff;
+                background: $primary;
+                position: inherit; 
+                bottom: inherit;
+                right: inherit;                
+            }
+        }
+    }    
+
+    
+    /// CONTENU
+    p#breadcrumbs{
+        margin: .5em 0;
+    }
+    .entry-header, .page-header{
+        margin: 0;
+    }    
+    .entry-title, .page-title{
+        font-size: 2.8rem;
+    }
+    .entry-content{
+        padding: 0;
+    }    
+
+    .error-404{
+        .page-header{
+            .page-title{
+                 font-size: 4rem;
+            }
+        }
+    }
+ 
+
+    /// SIDEBAR   
+    #secondary .widget-title{
+        font-size: 2.6rem;
+    }       
+    #secondary .widget_nav_menu{
+        .menu{
+            li{
+                a{
+                    font:2.4rem $font;
+                }
+            }
+        }
+    }
+   
+    
+    
+    /// FOOTER
+    #bottom{display: none}
+    #colophon{
+        background-image:none;
+        h3{display: none;}
+         .menu-menu-du-bas-container{
+                margin: 1em 0;
+                padding: 0;
+                .menu{            // les menus du footer
+                    text-align: center;
+                    > li{
+                        clear: both !important;
+                        display: block;
+                        margin: .4em 0;
+                    }
+                }        
+            }
+            .deco{
+                display: none;
+            }        
+    }
+    .ia{text-align: center;}
+   
+    
+}
+
+@media (min-width:414px) and (max-width:667px){
+
+}
+
+
+@media (max-width:414px){
+
+    
+}

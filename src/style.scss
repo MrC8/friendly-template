@@ -1,0 +1,19 @@
+//// IMPORT BOOTSTRAP CSS
+@import 'bootstrap-theme.min.css';
+@import 'bootstrap.min.css';
+
+//// IMPORT DES FICHIERS LESS
+@import 'normalize';
+@import 'typos';
+@import 'variables';
+@import 'structure';
+@import 'header';
+@import 'footer';
+@import 'menu';
+@import 'content';
+@import 'captions';
+@import 'galleries';
+@import 'responsive';
+
+//// IMPORT DU FONTAWESOME
+@import 'fontawesome/font-awesome';

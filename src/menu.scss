@@ -1,0 +1,112 @@
+#site-navigation{
+    background: $primary;
+}
+
+@media(max-width:767px){
+    #site-navigation.sticky{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        animation: moveFromTop 500ms ease;
+        .menu-menu-principal-container{
+            display: block;
+            max-height: 340px;
+            height:auto;
+            overflow-y:scroll;
+        }
+    }
+}
+@keyframes moveFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity:0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity:1;
+    }
+}
+
+ul#primary-menu{
+    margin: 0; padding: 0;
+    list-style: none;
+    text-align: center;
+    > li{
+        display: inline-block;
+        a{
+            display: block;
+            min-height: auto;
+            padding: .5em 1em;
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            font-family: $font;
+            font-weight: normal;
+            text-transform: none;
+            @include smooth(200ms);
+            color: #fff;
+            @include border-radius(0);
+        }
+        a:hover, a:active, a:focus{
+            color: #fff !important;
+            text-decoration: none;
+            @include smooth(200ms);
+            background: $primary-dark;
+        }      
+        
+    }
+    li.menu-item-has-children{ // menu parent
+        position:relative;
+        > a:after{
+            display: inline-block;
+            content: '\f107';
+            font-family: 'FontAwesome';
+            font-size: 1.8rem;
+            margin: -.2em 0 0 .5em;
+        }
+        &:hover > ul.sub-menu{ // les sous menu activé en hover
+            display: block;
+            position:absolute;
+            z-index: 10;
+            width: 260px;
+            margin: 0; padding: 0;
+            list-style: none;
+            text-align: left;
+            background: rgba(208,4,60,0.85);
+            a{
+                color: #fff !important;
+            }
+        }
+    }
+    > li ul.sub-menu{ // sous menu désactivé
+        display: none;
+        > li a{
+            padding: .4em .8em;
+            min-height: inherit;
+            color: #fff;
+            font-size: 1.8rem;
+            font-family: $font;
+            &:hover{
+                padding: .4em 0 .4em 1.2em;
+                background: $primary-dark;
+            }
+            &:before{
+                display: inline-block;
+                margin: 0 0 .3em 0;
+                content: '\f105';
+                font-family: 'FontAwesome';
+                font-style: 1.8rem;
+            }
+        }        
+    }
+    li.current-menu-item > a,
+    li.current_page_ancestor > a{
+        color: #fff;
+        font-family: $font;
+    }
+    li.current_page_ancestor ul li.current-menu-item > a{
+        background: $primary-dark;
+    }
+}
