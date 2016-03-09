@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<div class="site-info container">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wiatheme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wiatheme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wiatheme' ), 'wiatheme', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
@@ -24,5 +24,7 @@
 <a href="#" class="totop"></a>
 <?php wp_footer(); ?>
 
+</body>
+</html>
 </body>
 </html>
