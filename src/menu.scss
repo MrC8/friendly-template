@@ -1,5 +1,11 @@
-#nav{
-    background: $primary;
+.main-navigation{
+    background:$primary;
+}
+#nav {
+  z-index: 200;
+  position: relative;
+  width: 100%;
+  color: #fff;
 }
 
 ul#primary-menu{
@@ -8,27 +14,26 @@ ul#primary-menu{
     text-align: center;
     > li{
         display: inline-block;
+        margin: 0; padding: 0;
         a{
             display: block;
             min-height: auto;
-            padding: .5em 1em;
-            margin: 0;
+            padding: 1.2em 1em;
+            margin: 0; 
             font-size: 1.8rem;
             line-height: 3rem;
             font-family: $font;
             font-weight: normal;
-            text-transform: none;
+            text-transform: uppercase;
             @include smooth(200ms);
             color: #fff;
-            @include border-radius(0);
         }
-        a:hover, a:active, a:focus{
-            color: #fff !important;
+        &:hover a{
+            background: $primary;
+            color: #fff;
             text-decoration: none;
             @include smooth(200ms);
-            background: $primary-dark;
-        }      
-        
+        }
     }
     li.menu-item-has-children{ // menu parent
         position:relative;
@@ -42,27 +47,25 @@ ul#primary-menu{
         &:hover > ul.sub-menu{ // les sous menu activé en hover
             display: block;
             position:absolute;
-            z-index: 10;
-            width: 260px;
+            z-index: 1000;
+            width: 300px;
             margin: 0; padding: 0;
             list-style: none;
             text-align: left;
-            background: rgba(208,4,60,0.85);
-            a{
-                color: #fff !important;
-            }
         }
     }
     > li ul.sub-menu{ // sous menu désactivé
         display: none;
         > li a{
-            padding: .4em .8em;
+            padding: 0;
             min-height: inherit;
             color: #fff;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-family: $font;
+            text-transform: none;
+            border-bottom: solid 1px $primary-dark;
             &:hover{
-                padding: .4em 0 .4em 1.2em;
+                padding: 1em 0 1em 1.2em;
                 background: $primary-dark;
             }
             &:before{
@@ -71,13 +74,18 @@ ul#primary-menu{
                 content: '\f105';
                 font-family: 'FontAwesome';
                 font-style: 1.8rem;
-            }
-        }        
+            }       
+        }
+        li:last-child > a {
+            border: none;
+        }
     }
     li.current-menu-item > a,
     li.current_page_ancestor > a{
+        background: $second;
+        color: $primary;
+        font: $font 700;
         color: #fff;
-        font-family: $font;
     }
     li.current_page_ancestor ul li.current-menu-item > a{
         background: $primary-dark;
