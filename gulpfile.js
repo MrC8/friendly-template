@@ -41,9 +41,9 @@ var remoteFolder = '/wp-content/themes/wiatheme-sass';
 gulp.task( 'deploy', function () {
 
     var conn = ftp.create( {
-        host:     '62.210.13.200',
-        user:     'UsFTPwebianet',
-        password: '87##mOK02G#5C0$$15'
+        host:     'myhost',
+        user:     'myusername',
+        password: 'mypassword'
     } );
     
 
