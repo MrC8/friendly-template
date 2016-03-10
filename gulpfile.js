@@ -36,19 +36,17 @@ gulp.task('prod', function() {
 
 
 // envoi ftp
-var localFilesGlob = ['.css/**'];  
-var remoteFolder = '/wp-content/themes/wiatheme-sass';
+var localFilesGlob = ['.css/**'];  // local folder
+var remoteFolder = '/wp-content/themes/wiatheme-sass'; //distant folder
 gulp.task( 'deploy', function () {
 
+    //ftp access
     var conn = ftp.create( {
-        host:     'myhost',
+        host:     'myhostaddress',
         user:     'myusername',
         password: 'mypassword'
     } );
-    
 
-    // using base = '.' will transfer everything to /public_html correctly
-    // turn off buffering in gulp.src for best performance
 
     return gulp.src( localFilesGlob, { cwd: '.', buffer: false } )
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files
@@ -57,13 +55,6 @@ gulp.task( 'deploy', function () {
 
 //Watch task
 gulp.task('default',function() {   
-    gulp.watch('./src/**/*.scss',['build', 'prod']);
-    gulp.watch('./css/**/*.css', ['deploy']);
-        /*.on('change', function(event) {
-          console.log('Changes detected! Uploading file "' + event.path + '", ' + event.type);
-          return gulp.src( [event.path], { base: '.', buffer: false } )
-            .pipe( conn.newer( remoteFolder ) ) // only upload newer files 
-            .pipe( conn.dest( remoteFolder ) )
-          ;
-        });*/
+    gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
+    gulp.watch('./css/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
 });
