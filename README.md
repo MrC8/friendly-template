@@ -14,6 +14,7 @@ You just have to put your FTP param in the gulpfile.js
 * [Bootstrap (light) v3.3.3](http://getbootstrap.com/),
 * [FontAwesome 4.5.0](https://fortawesome.github.io/Font-Awesome/),
 * [Modernizr 2.6.2](https://modernizr.com/),
+* [Responsive off canvas menu by David Bushell] (https://github.com/dbushell/Responsive-Off-Canvas-Menu),
 * [gulp](http://gulpjs.com/)
 
 ### Includes
