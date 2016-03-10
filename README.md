@@ -34,3 +34,26 @@ You just have to put your FTP param in the gulpfile.js
 	gulp-livereload
 	vinyl-ftp
 	```
+### How to use
+
+* Install node.js
+* In terminal tape "cd /mypath-to-my-local-folder"
+* Then tape npm init
+
+1. Install [node.js](http://nodejs.org/)
+2. In **terminal** install Gulp dependencies in your local folder
+
+	```shell
+	cd /my_local_folder/website
+	npm install
+	```
+
+3. Edit the gulpfile.js and change the FTP access to your server
+
+4. Launch the default tasks
+
+	```shell
+	gulp
+	```
+
+5. Code your scss and gulp will minify and create two files that will be upload on server. Refresh and that's good :)
