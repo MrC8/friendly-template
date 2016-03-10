@@ -31,13 +31,13 @@ gulp.task('prod', function() {
         .pipe(rename({
           suffix: '.min'
         }))
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./css/'));
 });
 
 
 // envoi ftp
 var localFilesGlob = ['.css/**'];  // local folder
-var remoteFolder = '/wp-content/themes/wiatheme-sass'; //distant folder
+var remoteFolder = '/wp-content/themes/wiatheme-sass/css'; //distant folder
 gulp.task( 'deploy', function () {
 
     //ftp access
@@ -56,5 +56,5 @@ gulp.task( 'deploy', function () {
 //Watch task
 gulp.task('default',function() {   
     gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
-    gulp.watch('./css/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
+    gulp.watch('./css/**/*.css', ['deploy']); //watch change one style.min.css and deploy on FTP
 });
