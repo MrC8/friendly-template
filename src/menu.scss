@@ -57,7 +57,7 @@ ul#primary-menu{
     > li ul.sub-menu{ // sous menu désactivé
         display: none;
         > li a{
-            padding: 0;
+            padding: 1em 0 1em .8em;
             min-height: inherit;
             color: #fff;
             font-size: 1.6rem;
