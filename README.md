@@ -56,4 +56,4 @@ You just have to put your FTP param in the gulpfile.js
 	gulp
 	```
 
-5. Code your scss and gulp will minify and create two files that will be upload on server. Refresh and that's good :)
+5. Code your scss and gulp will minify and create two files that will be upload on server. Refresh your brother and that's good :)
