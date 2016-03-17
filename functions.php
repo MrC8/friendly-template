@@ -25,6 +25,14 @@ function remove_more_link_scroll( $link ) {
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
+
+
+/* Custom ajax loader */
+add_filter('wpcf7_ajax_loader', 'my_wpcf7_ajax_loader');
+function my_wpcf7_ajax_loader () {
+	return  get_stylesheet_directory_uri(). '/img/contact-ajax-loader.gif';
+}
+
  
 
 if ( ! function_exists( 'wiatheme_setup' ) ) :
