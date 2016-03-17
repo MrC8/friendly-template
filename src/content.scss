@@ -49,11 +49,6 @@ body{
 ////////////////////////////
 //     HOME 
 ////////////////////////////
-#homebloc{
-    overflow: hidden;
-    padding: 1em 0 0 0;
-}
-
 
 //// ARTICLE PAGE D'ACCUEIL
 
@@ -330,20 +325,6 @@ article.has-post-thumbnail{
                 content: '\f053';
             }
         }
-    }
-}
-
-
-////////////////////////////////////////
-//       PAGE CONTACT
-////////////////////////////////////////
-
-.page-template-page-contact .entry-title{
-    &:before{
-        display: inline-block;
-        content: '\f003';
-        font-family: FontAwesome;
-        margin: 0 .5em;
     }
 }
 
