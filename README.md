@@ -1,5 +1,8 @@
 A simple responsive template for wordpress. 
 =================================
+
+### Code your site in local with sass and automatic upload files on server
+
 Base on http://underscores.me/, it include gulp and sass. It also include a light Bootstrap 3.0 (mainly for the grid style),  FontAwesome 4.5.0 and a slide from left responsive menu.
 
 With this template you can code your style with sass in the local folder "src". A task create two local css files, one style.css which is a classic css file and a style.min.css file that is upload on the server by vinyl-ftp. Only style.min.css is used by the theme. 
