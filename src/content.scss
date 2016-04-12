@@ -3,6 +3,14 @@ body{
     background:url('#{$template_directory_uri}/bg.png') top repeat #f3e8d9;
     background-attachment: fixed;
     background-size: cover;
+    ::selection {
+    color: #fff;
+      background: $primary; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        color: #fff;
+      background: $primary; /* Gecko Browsers */
+    }     
   a{
         color: $primary;
     }
