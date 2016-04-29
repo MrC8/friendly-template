@@ -9,12 +9,10 @@
  
  
 // enlever la meta generator
-
 remove_action('wp_head', 'wp_generator');
 
 
 // activer les shortcode dans widget
-
 add_filter('widget_text', 'do_shortcode');
 
 
@@ -31,6 +29,22 @@ add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 add_filter('wpcf7_ajax_loader', 'my_wpcf7_ajax_loader');
 function my_wpcf7_ajax_loader () {
 	return  get_stylesheet_directory_uri(). '/img/contact-ajax-loader.gif';
+}
+
+
+/* Modifier l'affichage du titre des actualités */
+add_filter( 'get_the_archive_title', 'my_get_the_archive_title');
+function my_get_the_archive_title() {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+		} elseif ( is_archive() ) {
+            $title = 'Actualités de Faubourg 70 : Archives de ' . get_the_date('F Y');			
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        }
+    return $title;
 }
 
  
