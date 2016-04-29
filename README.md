@@ -1,15 +1,15 @@
 A simple responsive template for wordpress. 
 =================================
 
-### Code your site in local with sass and automatic upload files on server
+### Code your site in local with sass and automatic deploy files on server
 
 Base on http://underscores.me/, it include gulp and sass. It also include a light Bootstrap 3.0 (mainly for the grid style),  FontAwesome 4.5.0 and a slide from left responsive menu.
 
-With this template you can code your style with sass in the local folder "src". A task create two local css files, one style.css which is a classic css file and a style.min.css file that is upload on the server by vinyl-ftp. Only style.min.css is used by the theme. 
+With this template you can code your style with sass in the local folder "src". A task create two local css files, one style.css which is a classic css file and a style.min.css file that is deploy on the server by vinyl-ftp. Only style.min.css is used by the theme. 
 
 So you can code your site with sass in local and see in live on the server.
 
-You just have to put your FTP param in the gulpfile.js
+You just have to put your FTP param in the local gulpfile.js
 
 ### Uses
 
@@ -42,7 +42,7 @@ You just have to put your FTP param in the gulpfile.js
 
 * Install node.js
 * In terminal tape "cd /mypath-to-my-local-folder"
-* Then tape npm init
+* Then tape npm install
 
 1. Install [node.js](http://nodejs.org/)
 2. In **terminal** install Gulp dependencies in your local folder
@@ -60,4 +60,4 @@ You just have to put your FTP param in the gulpfile.js
 	gulp
 	```
 
-5. Code your scss and gulp will minify and create two files that will be upload on server. Refresh your brother and that's good :)
+5. Code your scss and gulp will minify and create two files that will be deploy on server. Refresh your brother and that's good :)
