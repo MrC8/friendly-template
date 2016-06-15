@@ -19,6 +19,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "gulp-watch": "^4.3.5",
-    "vinyl-ftp": "^0.4.5"
+    "gulp-notify": "^2.2.0"
   }
 }
