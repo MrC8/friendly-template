@@ -9,6 +9,7 @@ var cssimport = require("gulp-cssimport");
 var watch = require("gulp-watch");
 var livereload = require("gulp-livereload");
 var ftp = require('vinyl-ftp');
+var notify = require('gulp-notify');
 
 // création fichier production normal
 gulp.task('build', function() {
@@ -50,11 +51,12 @@ gulp.task( 'deploy', function () {
 
     return gulp.src( localFilesGlob, { cwd: '.', buffer: false } )
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files
-        .pipe( conn.dest( remoteFolder ) );
+        .pipe( conn.dest( remoteFolder ) )
+        .pipe(notify("Site mis à jour ! OH YEAH BABY :)"));
 } );
 
 //Watch task
 gulp.task('default',function() {   
     gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
-    gulp.watch('./css/**/*.css', ['deploy']); //watch change one style.min.css and deploy on FTP
+    gulp.watch('./css/**/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
 });
