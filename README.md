@@ -37,6 +37,7 @@ You just have to put your FTP param in the local gulpfile.js
 	gulp-watch
 	gulp-livereload
 	vinyl-ftp
+	gulp-notify
 	```
 ### How to use
 
