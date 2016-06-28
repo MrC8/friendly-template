@@ -10,46 +10,19 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wiatheme' ); ?></h1>
+					<h1 class="page-title" style="text-align:center;"><?php esc_html_e( 'Oups! Erreur 404...', 'revasso' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wiatheme' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( wiatheme_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wiatheme' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wiatheme' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .page-content -->
+				<div class="entry-content" style="text-align:center;">
+					<h2>Page introuvable...</h2>
+                    <p style="text-align:center;">Désolé, la page que vous cherchez est introuvable...</p>
+                    <p style="text-align:center;">Cliquez sur un lien dans le menu de navigation ou retournez en arrière.</p>
+                     <p style="text-align:center;"><a href="/" class="btn btn-primary">Accueil</a></p>
+				</div>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
