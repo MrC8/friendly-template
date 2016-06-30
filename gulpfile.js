@@ -52,11 +52,13 @@ gulp.task( 'deploy', function () {
     return gulp.src( localFilesGlob, { cwd: '.', buffer: false } )
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files
         .pipe( conn.dest( remoteFolder ) )
-        .pipe(notify("Site mis à jour ! OH YEAH BABY :)"));
+        .pipe(notify("Site mis à jour ! OH YEAH BABY :)")) // Notify what you want when file is uploaded
+        .pipe(livereload()); // Livereload your brother when file is uploded. You have to active the fonction in your brother with a plugin. For chrome use for exemple : https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?utm_source=plus
 } );
 
 //Watch task
 gulp.task('default',function() {   
     gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
+    livereload.listen();
     gulp.watch('./css/**/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
 });
