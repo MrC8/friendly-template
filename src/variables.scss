@@ -36,16 +36,12 @@ $brand-danger:  #d9534f;
 // MIXINS
 
 // les arrondis
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
+@mixin radius($radius) {
     border-radius: $radius;    
 }
 
 // Box shadow
 @mixin box-shadow($string){
-	-webkit-box-shadow: $string;
-	-moz-box-shadow:    $string;
 	box-shadow:         $string;
 }
 
@@ -101,7 +97,7 @@ a:active{
     text-align: center;
     clear: both;
     @include smooth(300ms);
-    @include border-radius(2px);
+    @include radius(2px);
     &:hover{
         @include smooth(300ms);
         text-decoration: none;
