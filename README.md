@@ -14,9 +14,8 @@ You just have to put your FTP param in the local gulpfile.js
 ### Uses
 
 * [Underscore.me starter theme](http://underscores.me/),
-* [Bootstrap (light) v3.3.3](http://getbootstrap.com/),
+* [Bootstrap v3.3.7](http://getbootstrap.com/),
 * [FontAwesome 4.6.3](https://fortawesome.github.io/Font-Awesome/),
-* [Modernizr 2.6.2](https://modernizr.com/),
 * [Responsive off canvas menu by David Bushell] (https://github.com/dbushell/Responsive-Off-Canvas-Menu),
 * [gulp](http://gulpjs.com/)
 
