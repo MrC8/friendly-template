@@ -1,6 +1,6 @@
 
 body{
-    background:url('#{$template_directory_uri}/bg.png') top repeat #f3e8d9;
+    background:url('../img/bg.png') top repeat #f3e8d9;
     background-attachment: fixed;
     background-size: cover;
     ::selection {
@@ -96,7 +96,7 @@ p#breadcrumbs{
     margin: 1em 0;
     padding: .5em;
     background: $gray-lighter;
-    @include border-radius(3px);
+    @include radius(3px);
     a{
         color:$primary;
     }
@@ -307,7 +307,7 @@ article.has-post-thumbnail{
                 color: #fff;
                 font:1.8rem $font;
                 @include smooth(200ms);
-                @include border-radius(20px);
+                @include radius(20px);
                 &:before{
                     display: inline-block;
                     font-family:FontAwesome;
