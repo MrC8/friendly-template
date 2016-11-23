@@ -106,6 +106,17 @@ ul#primary-menu{
     }    
 }
 
+/////////////////////////
+/// MENU RESPONSIVE
+/////////////////////////
+
+@media (min-width:1041px){
+    /// MENU
+    .nav-btn,
+    .nav-txt,
+    #closebtn{display: none;}   
+    
+}
 
 @media (max-width:768px){
         
