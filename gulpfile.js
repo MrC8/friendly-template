@@ -37,8 +37,8 @@ gulp.task('prod', function() {
 
 
 // envoi ftp
-var localFilesGlob = ['./css/**'];  // local folder
-var remoteFolder = '/wp-content/themes/mytheme/css'; //distant folder
+var localFilesGlob = ['./css/style.min.css'];  // local folder
+var remoteFolder = '/wp-content/themes/mytheme/css'; //distant folder !!!! CHANGE THEME FOLDER NAME !!!!
 gulp.task( 'deploy', function () {
 
     //ftp access
