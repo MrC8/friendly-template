@@ -10,6 +10,23 @@ var watch = require("gulp-watch");
 var livereload = require("gulp-livereload");
 var ftp = require('vinyl-ftp');
 var notify = require('gulp-notify');
+//js
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+
+// création d'un fichier JS minifié : PENSER A Y METTRE LES FICHIERS
+gulp.task('scripts', function() {
+  gulp.src([
+      './js/bootstrap.min.js',
+      './js/modernizr.js',      
+      './js/skip-link-focus-fix.js',
+      './js/customiz.js'
+      ])
+    .pipe(concat('wia.min.js',{newLine: ';'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/'))
+});
+
 
 // création fichier production normal
 gulp.task('build', function() {
@@ -59,6 +76,6 @@ gulp.task( 'deploy', function () {
 //Watch task
 gulp.task('default',function() {   
     gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
-    livereload.listen();
     gulp.watch('./css/**/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
+    livereload.listen();
 });
