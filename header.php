@@ -46,7 +46,7 @@
     <?php if (is_home()) : ?>
 		<?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?>
 	<?php endif; ?>
-    <div id="content" class="site-content <?php if (!is_page_template('full_width.php')):?>container<?php endif; ?>">
+    <div id="content" class="site-content <?php if (!is_page_template('page-full_width.php')):?>container<?php endif; ?>">
 	    
 <?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>	    
