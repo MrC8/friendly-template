@@ -1,8 +1,10 @@
+@import 'bootstrap/_variables';
+
 // Couleurs principales
-$primary:		   #439ab3;  // vert
-$primary-light:    lighten($primary, 18%);
-$primary-lighter:  lighten($primary, 10%);
-$primary-dark:     darken($primary, 5%);
+$primary:		$brand-primary;  // bleu
+$primary-light:		lighten($primary, 18%);
+$primary-lighter:	lighten($primary, 10%);
+$primary-dark:		darken($primary, 5%);
 
 $second:           #e6a800; // jaune
 $second-light:     lighten(#e6a800, 20%); // jaune clair
@@ -45,26 +47,17 @@ a:active{
 
 .alignleft{
     float: left;
-    width: auto;
     margin: 0 1em 1em 0;
 }
 .alignright{
     float: right;
-    width: auto;
     margin: 0 0 1em 1em;
 }
 .aligncenter{
     text-align: center !important; 
     margin: .5em auto;
-    width: auto !important; 
     float: none !important; 
-    display: inline !important; 
-    height: auto;
-}
-
-.alignnone {
-    width: auto;
-    float: none;
+    display: block; 
 }
 
 // LES BOUTONS
