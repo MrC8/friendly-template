@@ -276,17 +276,19 @@ article.has-post-thumbnail{
     padding: 1em 1em 0 1em;
 }
 #secondary .widget-title{
-   padding: .5em; margin: 0;
+   padding: .5em 0; margin: 0 0 1em 0;
     font-family: $font-b;
     font-size: 2.5rem;
     font-weight: bold;
-    color:#fff;
     display: block;
+    border-bottom: solid 1px #d7d7d7;
 }
 #secondary .widget{
-    padding: 0;
+    padding: .5em;
     margin-bottom: 1em;
     overflow: hidden;
+    background: #fff;
+    @include box-shadow(0 1px 8px 0px rgba(0,0,0,0.1));
     ul{
         margin: 0 1em 1em;
         li{
