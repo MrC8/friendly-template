@@ -38,7 +38,7 @@ function my_get_the_archive_title() {
     if ( is_category() ) {
             $title = single_cat_title( '', false );
 		} elseif ( is_archive() ) {
-            $title = 'Actualités de Faubourg 70 : Archives de ' . get_the_date('F Y');			
+            $title = 'Archives de ' . get_the_date('F Y');			
         } elseif ( is_tag() ) {
             $title = single_tag_title( '', false );
         } elseif ( is_author() ) {
@@ -160,14 +160,6 @@ function wiatheme_scripts() {
 	wp_enqueue_style( 'wiatheme-style', get_template_directory_uri() . '/css/style.min.css' );
 
 	wp_enqueue_script( 'wia-js', get_template_directory_uri() . '/dist/wia.min.js', array(), '', true );
-
-	//wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
-
-	//wp_enqueue_script( 'wiatheme-js', get_template_directory_uri() . '/js/customiz.js', array(), '', true );
-	//wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '', true );
-	//wp_enqueue_script( 'wiatheme-navigation', get_template_directory_uri() . '/js/nav.js', array(), '20120206', true );
-
-	//wp_enqueue_script( 'wiatheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
