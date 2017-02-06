@@ -259,15 +259,6 @@ h2.entry-title{
     overflow: hidden;
 }
 
-article.has-post-thumbnail{
-    .entry-content{
-        p:first-child{
-            -webkit-margin-before: none !important;
-            margin: 0 !important
-        }    
-    }
-}
-
 
 ////////////////////////////////
 //      PAGE FULL WIDTH
@@ -312,6 +303,91 @@ article.has-post-thumbnail{
     }
 }
 
+////////////////////////////////
+//      UN ARTICLE
+////////////////////////////////
+
+.single-post{    
+}
+
+////////////////////////////////
+//      ZONE COMMENTAIRES
+////////////////////////////////
+#comments{
+    background: #f7f7f7;
+    #respond{
+        background: #fff;
+        padding: 2em;
+        margin: 2em;
+        overflow: hidden;
+        @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+        @media(max-width:768px){
+            margin: 2em 0;
+            padding: 1em;
+        }
+        #reply-title{
+            margin: 0 0 1em;
+            padding: 0 0 .5em;
+            border-bottom: solid 1px $gray-lighter;
+        }
+        #comment{
+            height: 135px;
+        }
+        .g-recaptcha{
+            clear: both;
+            overflow: hidden;
+            margin-left: 15px !important;
+            margin-bottom: 1.5em !important;
+        }
+        .submit{
+            margin-left: 15px;
+        }
+    }
+}
+
+.comment-list{
+    background: #fff;
+    margin: 0 0 2em;
+    padding: 1.6em;
+    border: solid 1px $gray-light;
+    font-family: $font;
+    list-style: none;
+    overflow: hidden;
+    &.toggled{
+        height: 100%;
+    }
+    a{
+        color: $gray-light;
+    }
+    .avatar {
+        @extend .alignleft;
+    }
+    .reply{
+        margin-bottom: .5em;
+        font-size: 1.2rem;
+    }
+    .depth-1, .depth-2, .depth-3, .depth-4, .depth-5{
+        border-bottom: solid 1px $gray-lighter;
+        margin-bottom: 1em;
+        &:last-child{
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    .children{
+        margin: .5em 0 .5em 1em;;
+        padding: .5em 0 0 .5em;
+        border-left: solid 1px $gray-light;
+        list-style: none;
+        border-top:  solid 1px $gray-lighter;
+        overflow: hidden;
+    }
+    .comment-awaiting-moderation{
+        background: $brand-warning;
+        font-size: 1.2rem;
+        padding: .3em;
+    }
+}
 
 ///////////////////////////////////////
 //             SIDEBAR
