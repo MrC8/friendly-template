@@ -7,8 +7,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area col-sm-8">
 		<main id="main" class="site-main" role="main">
-<?php if ( function_exists('yoast_breadcrumb') ) 
-{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
