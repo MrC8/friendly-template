@@ -267,6 +267,49 @@ article.has-post-thumbnail{
 }
 
 
+////////////////////////////////
+//      PAGE FULL WIDTH
+////////////////////////////////
+.page-template-full_width{
+}
+
+
+////////////////////////////////
+//      PAGE COLONNE GAUCHE
+////////////////////////////////
+.page-template-page-left{
+}
+
+
+////////////////////////////////
+//      PAGE SANS COLONNE
+////////////////////////////////
+.page-template-page-sans-colonne{
+}
+
+
+////////////////////////////////
+//      BLOG
+////////////////////////////////
+
+.archive{
+    .post{
+        margin-bottom: 1em;
+        border-bottom: solid 1px #ccc;
+    }
+    .entry-title{
+        font-size: 2.5rem;
+        a{
+            color: $primary !important;
+        }
+    }
+    .entry-meta{
+        a{
+            color: $primary;
+        }
+    }
+}
+
 
 ///////////////////////////////////////
 //             SIDEBAR
