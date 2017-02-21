@@ -2,6 +2,7 @@ html {
 	-webkit-font-smoothing: antialiased;
 }
 body{
+    font-family: $font;
     background:url('../img/bg.png') top repeat #f3e8d9;
     background-attachment: fixed;
     background-size: cover;
@@ -316,11 +317,12 @@ h2.entry-title{
 //      ZONE COMMENTAIRES
 ////////////////////////////////
 #comments{
+    padding:1em;
     background: #f7f7f7;
     #respond{
         background: #fff;
         padding: 2em;
-        margin: 2em;
+        margin: 2em 0;
         overflow: hidden;
         @include box-shadow(0 1px 3px rgba(0,0,0,0.3));
         @media(max-width:768px){
@@ -363,6 +365,7 @@ h2.entry-title{
     }
     .avatar {
         @extend .alignleft;
+	width:auto;
     }
     .reply{
         margin-bottom: .5em;
