@@ -1,7 +1,6 @@
-jQuery(document).ready(function ($) {
-	
-	
+(function( $ ) {
 
+	"use strict";
 	/////////////////////////////////////////////////////////////////////////////////////////////	
 	// Annuler l'envoi vers téléphone pour autre que mobile et annuler le clic sur menu parent */
 	var $window = $(window);	
@@ -41,4 +40,4 @@ jQuery(document).ready(function ($) {
 	});
 	
 					
-});
+})(jQuery);
