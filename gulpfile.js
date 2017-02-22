@@ -18,7 +18,8 @@ var concat = require('gulp-concat');
 gulp.task('scripts', function() {
   gulp.src([
       './js/bootstrap.min.js',
-      './js/modernizr.js',      
+      './js/modernizr.js',
+      './js/nav.js',
       './js/skip-link-focus-fix.js',
       './js/customiz.js'
       ])
